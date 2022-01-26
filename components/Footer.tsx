@@ -1,5 +1,6 @@
 import {
     Box,
+    Center,
     Container,
     Text,
     VStack,
@@ -10,9 +11,9 @@ import {
     return (
       <Box bg={"gray.50"}>
         <Container maxW={"container.xl"} py={4}>
-          <VStack spacing={15} align={'flex-start'}>
+          <Center>
             <Text>© 2022 Maxim Hüsler. All rights reserved</Text>
-          </VStack>
+          </Center>
         </Container>
       </Box>
     );

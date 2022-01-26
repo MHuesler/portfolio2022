@@ -1,11 +1,12 @@
 import type { NextPage } from 'next'
 import Footer from '../components/Footer'
 import Nav from '../components/Nav'
+import Landing from '../sections/Landing'
 
 const Home: NextPage = () => {
   return (
     <>
-      <Nav></Nav>
+      <Landing></Landing>
       <Footer></Footer>
     </>
   )

@@ -4,8 +4,8 @@ import {
     Text,
     Link,
     Container,
-  } from "@chakra-ui/react";
-  import { NextPage } from "next";
+} from "@chakra-ui/react";
+import { NextPage } from "next";
   
 const Nav: NextPage = () => {
     return (
