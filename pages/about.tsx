@@ -1,7 +1,5 @@
-import { Box, Center, Container, Flex, Heading, HStack, Icon, VStack, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, HStack, Text } from "@chakra-ui/react";
 import { NextPage } from "next";
-import { IconType } from "react-icons";
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 
@@ -13,7 +11,7 @@ const About: NextPage = () => {
                 <Container maxW={'container.xl'}>
                     <Heading mb={3}>about</Heading>
                     <Box mb={10}>
-                        <Text>Hey. I'm Maxim a 18 year old Software Developer from Switzerland 🌄.</Text>
+                        <Text>Hey. I'm Maxim an 18 year old Software Developer from Switzerland 🌄.</Text>
                         <Text>In my free time I like to <i>design and develop software</i>, <i>trade equity</i>, <i>go on road trips</i> and <i>play video games</i>.</Text>
                     </Box>
                     <Box mb={10}>

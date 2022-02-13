@@ -1,21 +1,30 @@
 import { Box, Container, Flex, Heading, Link, SimpleGrid, Text } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import Footer from '../components/Footer'
+import Head from 'next/head'
 
 const Home: NextPage = () => {
   return (
     <Flex minH={'100vh'} direction={'column'}>
+      <Head>
+        <title>Maxim Hüsler Portfolio</title>
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name='description' content=''></meta>
+      </Head>
       <Flex direction={'column'} flex={1}>
-        <Container maxW={'container.xl'}>
-          <Box mb={20} mt={10}>
-            <Heading size={'2xl'}>Hi, I'm Maxim. ✌️</Heading>
-            <Text>A 18 year old Software Developer from Switzerland.</Text>
-          </Box>
-          <SimpleGrid minChildWidth='450px' spacing='46px' mb={5}>
-            <HomeBox title={'work'} href={'/work'}></HomeBox>
-            <HomeBox title={'about'} href={'/about'}></HomeBox>
-          </SimpleGrid>
-        </Container>
+        <main>
+          <Container maxW={'container.xl'}>
+            <Box mb={20} mt={10}>
+              <Heading as={'h1'} size={'2xl'}>Hi, I'm Maxim. ✌️</Heading>
+              <Text>A 18 year old Software Developer from Switzerland.</Text>
+            </Box>
+            <SimpleGrid minChildWidth='450px' spacing='46px' mb={5}>
+              <HomeBox title={'work'} href={'/work'}></HomeBox>
+              <HomeBox title={'about'} href={'/about'}></HomeBox>
+              <HomeBox title={'contact'} href={'/contact'}></HomeBox>
+            </SimpleGrid>
+          </Container>
+        </main>
       </Flex>
       <Footer></Footer>
     </Flex>
