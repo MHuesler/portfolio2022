@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         <main>
           <Container maxW={'container.xl'}>
             <Box mb={20} mt={10}>
-              <Heading as={'h1'} size={'2xl'}>Hi, I'm Maxim. ✌️</Heading>
+              <Heading as={'h1'} size={'2xl'}>Hi, I&apos;m Maxim. ✌️</Heading>
               <Text>A 18 year old Software Developer from Switzerland.</Text>
             </Box>
             <SimpleGrid minChildWidth='450px' spacing='46px' mb={5}>
