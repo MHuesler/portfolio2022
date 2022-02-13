@@ -7,7 +7,7 @@ import Link from "next/link";
 import Nav from "../components/Nav";
 
 import { UrlObject } from 'url';
-declare type Url = string | UrlObject;
+import Footer from "../components/Footer";
 
 interface Project {
     title: string
@@ -15,9 +15,9 @@ interface Project {
     employer: string
     technologies: string
     image: string
-    siteUrl: Url
-    frontendGithub?: Url
-    backendGithub?: Url
+    siteUrl: string
+    frontendGithub?: string
+    backendGithub?: string
 }
 
 const projects: Project[] = [
@@ -40,7 +40,7 @@ const Project = ({project}: {project: Project}) => {
         <Box py="5">
             <Flex direction={{ base: 'column', md: 'row'}} gap={5}>
                 <Box>
-                    <a href="https://astrovote.com">
+                    <a href="https://astrovote.com" rel="noreferrer" target={'_blank'}>
                         <Image borderRadius={'md'} shadow={'md'} src='astrovote-home.png' alt="Screenshot from astrovote homepage"></Image>
                     </a>
                 </Box>
@@ -56,15 +56,15 @@ const Project = ({project}: {project: Project}) => {
                     </Box>
                     <Box>
                         <Heading size={'sm'}>Links:</Heading>
-                        <Box><Link href={project.siteUrl}>Visit Site</Link></Box>
+                        <Box><a href={project.siteUrl} rel="noreferrer" target={'_blank'}>Visit Site</a></Box>
                         {
                             project.frontendGithub ? 
-                                <Box><Link href={project.frontendGithub as Url}>View frontend sourcecode</Link></Box>
+                                <Box><a href={project.frontendGithub} rel="noreferrer" target={'_blank'}>View frontend sourcecode</a></Box>
                             : ""
                         }
                         {
                             project.backendGithub ? 
-                                <Box><Link href={project.backendGithub as Url}>View backend sourcecode</Link></Box>
+                                <Box><a href={project.backendGithub} rel="noreferrer" target={'_blank'}>View backend sourcecode</a></Box>
                             : ""
                         }
                     </Box>
@@ -76,13 +76,16 @@ const Project = ({project}: {project: Project}) => {
 
 const work: NextPage = () => {
     return (
-        <Box>
+        <Flex minH={'100vh'} direction={'column'}>
             <Nav></Nav>
-            <Container maxW={'container.xl'}>
-                <Heading mb={3}>latest work</Heading>
-                { projects.map((project, i) => <Project project={project} key={i}></Project> )}
-            </Container>
-        </Box>
+            <Flex direction={'column'} flex={1}>
+                <Container maxW={'container.xl'}>
+                    <Heading mb={3}>work</Heading>
+                    { projects.map((project, i) => <Project project={project} key={i}></Project> )}
+                </Container>
+            </Flex>
+            <Footer></Footer>
+        </Flex>
     );
 };
   

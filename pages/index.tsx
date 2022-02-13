@@ -1,20 +1,24 @@
-import { Box, Container, Heading, Link, SimpleGrid, Text } from '@chakra-ui/react'
+import { Box, Container, Flex, Heading, Link, SimpleGrid, Text } from '@chakra-ui/react'
 import type { NextPage } from 'next'
+import Footer from '../components/Footer'
 
 const Home: NextPage = () => {
   return (
-    <Container maxW={'container.xl'}>
-      <Box mb={20} mt={10}>
-        <Heading size={'2xl'}>Hi, I'm Maxim. ✌️</Heading>
-        <Text>A 18 year old Software Developer from Switzerland.</Text>
-      </Box>
-      <SimpleGrid minChildWidth='450px' spacing='46px' mb={5}>
-        <HomeBox title={'work'} href={'/work'}></HomeBox>
-        <HomeBox title={'skills'} href={'/skills'}></HomeBox>
-        <HomeBox title={'about'} href={'/about'}></HomeBox>
-        <HomeBox title={'contact'} href={'/contact'}></HomeBox>
-      </SimpleGrid>
-    </Container>
+    <Flex minH={'100vh'} direction={'column'}>
+      <Flex direction={'column'} flex={1}>
+        <Container maxW={'container.xl'}>
+          <Box mb={20} mt={10}>
+            <Heading size={'2xl'}>Hi, I'm Maxim. ✌️</Heading>
+            <Text>A 18 year old Software Developer from Switzerland.</Text>
+          </Box>
+          <SimpleGrid minChildWidth='450px' spacing='46px' mb={5}>
+            <HomeBox title={'work'} href={'/work'}></HomeBox>
+            <HomeBox title={'about'} href={'/about'}></HomeBox>
+          </SimpleGrid>
+        </Container>
+      </Flex>
+      <Footer></Footer>
+    </Flex>
   )
 }
 

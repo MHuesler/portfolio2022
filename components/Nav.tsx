@@ -7,32 +7,27 @@ import {
 } from "@chakra-ui/react";
 import { NextPage } from "next";
 
-
-
+const NavLink = ({ text, route}: { text: string, route: string}) => {
+  return (
+    <Link href={route} _hover={{ textDecoration: "none", color: "gray.500" }}>
+      <Text fontSize="lg" fontWeight={700}>{ text }</Text>
+    </Link>
+  )
+}
 
 const Nav: NextPage = () => {
   return (
     <Container maxW='container.xl'>
       <Flex py="3" justify={"space-between"} alignItems="center">
-        <Link href={"/"} _hover={{ textDecoration: "none" }}>
-            <Text fontSize="lg" fontWeight={700}>Home</Text>
-        </Link>
+        <NavLink text="Home" route="/"></NavLink>
         <HStack spacing={5}>
-          <Link href={"work"} _hover={{ textDecoration: "none", color: "gray.500" }}>
-            <Text fontSize="md" fontWeight={700}>
-              Work
-            </Text>
-          </Link>
-          <Link href={"about"} _hover={{ textDecoration: "none", color: "gray.500" }}>
-            <Text fontSize="md" fontWeight={700}>
-              About
-            </Text>
-          </Link>
+          <NavLink text="Work" route="work"></NavLink>
+          <NavLink text="About" route="about"></NavLink>
         </HStack>
       </Flex>
     </Container>
   );
 };
   
-  export default Nav;
+export default Nav;
   
