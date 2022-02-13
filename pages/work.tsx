@@ -5,6 +5,7 @@ import {
 import type { NextPage } from "next";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 interface Project {
     date: string
@@ -123,12 +124,18 @@ const Project = ({project}: {project: Project}) => {
 const work: NextPage = () => {
     return (
         <Flex minH={'100vh'} direction={'column'}>
+            <Head>
+                <title>Maxim Hüsler | Work</title>
+                <meta name='description' content='View the latest projects from Maxim Hüsler.'></meta>
+            </Head>
             <Nav></Nav>
             <Flex direction={'column'} flex={1}>
-                <Container maxW={'container.xl'}>
-                    <Heading mb={3}>work</Heading>
-                    { projects.map((project, i) => <Project project={project} key={i}></Project> )}
-                </Container>
+                <main>
+                    <Container maxW={'container.xl'}>
+                        <Heading as={'h1'} mb={3}>work</Heading>
+                        { projects.map((project, i) => <Project project={project} key={i}></Project> )}
+                    </Container>
+                </main>
             </Flex>
             <Footer></Footer>
         </Flex>

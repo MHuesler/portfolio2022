@@ -7,9 +7,8 @@ const Home: NextPage = () => {
   return (
     <Flex minH={'100vh'} direction={'column'}>
       <Head>
-        <title>Maxim Hüsler Portfolio</title>
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name='description' content=''></meta>
+        <title>Maxim Hüsler | Portfolio Home</title>
+        <meta name='description' content='This is the portfolio site of Maxim Hüsler a Software Developer from Switzerland.'/>
       </Head>
       <Flex direction={'column'} flex={1}>
         <main>
