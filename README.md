@@ -1,8 +1,6 @@
-## Getting Started
+## About portfolio2022
 
-Hey👋. Visit my portfolio site [here](http://www.maximhuesler.com/).
+Hey👋. This is my portfolio site, you can visit it [here](http://www.maximhuesler.com/).
 
-
-This project was built using the nextjs framework with react.
-
+It was built using React with NextJS and Chakra UI
 You can run the project with `npm run dev`.
