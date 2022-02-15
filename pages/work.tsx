@@ -18,6 +18,7 @@ interface Project {
     blog?: string
     frontendGithub?: string
     backendGithub?: string
+    gitHub?: string
 }
 
 const projects: Project[] = [
@@ -57,6 +58,16 @@ const projects: Project[] = [
         image: 'school-sys-home.png',
     },
     {
+        date: '2022 - 2022',
+        title: 'Portfolio 2022',
+        employer: 'sideproject',
+        description: `Portfolio2022 is my current portfolio website.`,
+        technologies: 'NextJS, Chakra UI',
+        siteUrl: 'https://maximhuesler.com',
+        image: 'portfolio-home.png',
+        gitHub: 'https://github.com/MHuesler/portfolio2022'
+    },
+    {
         date: '2021 - now',
         title: 'TherapyApp',
         employer: 'sideproject',
@@ -64,6 +75,8 @@ const projects: Project[] = [
         technologies: 'Angular13, RxJS, Taiga UI, .NET 6, Entity Framework, PostgreSQL, NGINX, Ngx-Translate',
         siteUrl: 'https://my.therapyapp.ch',
         image: 'therapyapp.png',
+        frontendGithub: 'https://github.com/therapy-app/frontend',
+        backendGithub: 'https://github.com/therapy-app/backend'
     },
     {
         date: '2021 - now',
@@ -73,7 +86,8 @@ const projects: Project[] = [
         technologies: 'React, NextJS, Chakra UI',
         siteUrl: 'https://therapyapp.ch',
         image: 'therapyapp-home.png',
-    },
+        gitHub: 'https://github.com/therapy-app/homepage'
+    }
 ]
 
 const Project = ({project}: {project: Project}) => {
@@ -99,6 +113,11 @@ const Project = ({project}: {project: Project}) => {
                     <Box>
                         <Heading size={'sm'}>Links:</Heading>
                         <Box><a href={project.siteUrl} rel="noreferrer" target={'_blank'}>Visit Site</a></Box>
+                        {
+                            project.gitHub ? 
+                                <Box><a href={project.gitHub} rel="noreferrer" target={'_blank'}>View sourcecode</a></Box>
+                            : ""
+                        }
                         {
                             project.frontendGithub ? 
                                 <Box><a href={project.frontendGithub} rel="noreferrer" target={'_blank'}>View frontend sourcecode</a></Box>
