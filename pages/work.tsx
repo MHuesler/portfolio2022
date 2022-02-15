@@ -82,7 +82,7 @@ const projects: Project[] = [
         date: '2021 - now',
         title: 'TherapyApp Homepage',
         employer: 'sideproject',
-        description: `TherapyApp Homepage is the homepage for TherapyApp. It provides a showcase of the apps features.`,
+        description: `This is the homepage for TherapyApp. It provides a showcase of the apps features.`,
         technologies: 'React, NextJS, Chakra UI',
         siteUrl: 'https://therapyapp.ch',
         image: 'therapyapp-home.png',
