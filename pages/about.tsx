@@ -29,7 +29,7 @@ const About: NextPage = () => {
                             <Heading fontSize={'xl'}>Languages</Heading>
                             <Text>C#, Typescript, JavaScript, HTML5, CSS3, Golang, Dart</Text>
                             <Heading fontSize={'xl'}>Other</Heading>
-                            <Text>Linux, NGINX, Node, ReactiveX, PostgreSQL, Docker</Text>
+                            <Text>Node, ReactiveX, NGINX, PostgreSQL, Docker</Text>
                         </Box>
                         <Box mb={10}>
                             <Heading fontSize={'2xl'}>Education</Heading>
