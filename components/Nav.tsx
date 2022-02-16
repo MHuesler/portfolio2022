@@ -9,6 +9,7 @@ import {
 import { NextPage } from "next";
 import { IconType } from "react-icons";
 import { FaArrowLeft } from "react-icons/fa";
+import { ColorModeSwitcher } from "./ColorModeSwitcher";
 
 const NavLink = ({ text, route, icon}: { text: string, route: string, icon?: IconType }) => {
   return (
@@ -32,6 +33,7 @@ const Nav: NextPage = () => {
           <NavLink text="Work" route="work"></NavLink>
           <NavLink text="About" route="about"></NavLink>
           <NavLink text="Contact" route="contact"></NavLink>
+          <ColorModeSwitcher></ColorModeSwitcher>
         </HStack>
       </Flex>
     </Container>

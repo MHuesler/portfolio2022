@@ -2,6 +2,7 @@ import { Box, Container, Flex, Heading, Link, SimpleGrid, Text } from '@chakra-u
 import type { NextPage } from 'next'
 import Footer from '../components/Footer'
 import Head from 'next/head'
+import { ColorModeSwitcher } from '../components/ColorModeSwitcher'
 
 const Home: NextPage = () => {
   return (
@@ -13,10 +14,13 @@ const Home: NextPage = () => {
       <Flex direction={'column'} flex={1}>
         <main>
           <Container maxW={'container.xl'}>
-            <Box mb={20} mt={10}>
-              <Heading as={'h1'} size={'2xl'}>Hi, I&apos;m Maxim. ✌️</Heading>
-              <Text>An 18 year old Software Developer from Switzerland.</Text>
-            </Box>
+            <Flex py={3} justifyContent={'space-between'}>
+              <Box mb={20} mt={10}>
+                <Heading as={'h1'} size={'2xl'}>Hi, I&apos;m Maxim. ✌️</Heading>
+                <Text>An 18 year old Software Developer from Switzerland.</Text>
+              </Box>
+              <ColorModeSwitcher></ColorModeSwitcher>
+            </Flex>
             <SimpleGrid minChildWidth='450px' spacing='46px' mb={5}>
               <HomeBox title={'work'} href={'/work'}></HomeBox>
               <HomeBox title={'about'} href={'/about'}></HomeBox>
