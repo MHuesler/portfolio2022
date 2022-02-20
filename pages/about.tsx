@@ -22,14 +22,14 @@ const About: NextPage = () => {
                         </Box>
                         <Box mb={10}>
                             <Heading fontSize={'2xl'} mb={2}>Technical Skills</Heading>
-                            <Heading fontSize={'xl'}>Frontend</Heading>
-                            <Text>Angular, React, NextJS, ASP.NET Razor, Flutter</Text>
-                            <Heading fontSize={'xl'}>Backend</Heading>
-                            <Text>REST, .NET, EntityFramework, OData, OAuth, ExpressJS, Gorilla/Mux</Text>
+                            <Heading fontSize={'xl'}>Frameworks and Libraries</Heading>
+                            <Text>Angular, React, NextJS, .NET, ASP.NET, EntityFramework, Flutter, ExpressJS, Gorilla/Mux, RxJS</Text>
                             <Heading fontSize={'xl'}>Languages</Heading>
                             <Text>C#, Typescript, JavaScript, HTML5, CSS3, Golang, Dart</Text>
+                            <Heading fontSize={'xl'}>Tools</Heading>
+                            <Text>Node, NGINX, PostgreSQL, Docker, JWT</Text>
                             <Heading fontSize={'xl'}>Other</Heading>
-                            <Text>Node, ReactiveX, NGINX, PostgreSQL, Docker</Text>
+                            <Text>REST, OData</Text>
                         </Box>
                         <Box mb={10}>
                             <Heading fontSize={'2xl'}>Education</Heading>
