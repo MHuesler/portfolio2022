@@ -17,7 +17,7 @@ const About: NextPage = () => {
                     <Container maxW={'container.xl'}>
                         <Heading as={'h1'} mb={3}>about</Heading>
                         <Box mb={10}>
-                            <Text>Hey. I&apos;m Maxim an 18 year old Software Developer from Switzerland 🌄.</Text>
+                            <Text>Hey. I&apos;m Maxim a 19 year old Software Developer from Switzerland 🌄.</Text>
                             <Text>In my free time I like to <i>design and develop software</i>, <i>trade equity</i>, <i>go on road trips</i> and <i>play video games</i>.</Text>
                         </Box>
                         <Box mb={10}>
