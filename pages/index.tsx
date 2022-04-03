@@ -17,7 +17,7 @@ const Home: NextPage = () => {
             <Flex py={3} justifyContent={'space-between'}>
               <Box mb={20} mt={10}>
                 <Heading as={'h1'} size={'2xl'}>Hi, I&apos;m Maxim. ✌️</Heading>
-                <Text>An 18 year old Software Developer from Switzerland.</Text>
+                <Text>A 19 year old Software Developer from Switzerland.</Text>
               </Box>
               <ColorModeSwitcher></ColorModeSwitcher>
             </Flex>
